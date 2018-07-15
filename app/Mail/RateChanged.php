@@ -2,7 +2,8 @@
 
 namespace App\Mail;
 
-use App\Currency;
+use App\Entity\Currency;
+use App\User;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;

@@ -3,7 +3,7 @@
 namespace App\Policies;
 
 use App\User;
-use App\Currency;
+use App\Entity\Currency;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
 class CurrencyPolicy
@@ -14,7 +14,7 @@ class CurrencyPolicy
      * Determine whether the user can view the currency.
      *
      * @param  \App\User  $user
-     * @param  \App\Currency  $currency
+     * @param  \App\Entity\Currency  $currency
      * @return mixed
      */
     public function view(User $user, Currency $currency)
@@ -37,7 +37,7 @@ class CurrencyPolicy
      * Determine whether the user can update the currency.
      *
      * @param  \App\User  $user
-     * @param  \App\Currency  $currency
+     * @param  \App\Entity\Currency  $currency
      * @return mixed
      */
     public function update(User $user, Currency $currency)
@@ -49,7 +49,7 @@ class CurrencyPolicy
      * Determine whether the user can delete the currency.
      *
      * @param  \App\User  $user
-     * @param  \App\Currency  $currency
+     * @param  \App\Entity\Currency  $currency
      * @return mixed
      */
     public function delete(User $user, Currency $currency)
