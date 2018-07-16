@@ -20,7 +20,7 @@ class CurrenciesController extends Controller
         $oldRate = $currency->rate;
         $currency->rate = $request->input('rate');
         $currency->save();
-        $users = User::all();
+        $users = User::where('is_admin', false)->get();
         foreach ($users as $user) {
             SendRateChangedEmail::dispatch($user, $currency, $oldRate)->onQueue('notification');
         }
