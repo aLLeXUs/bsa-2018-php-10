@@ -61,6 +61,11 @@
                             </div>
                         </div>
                     </form>
+                    <div class="row">
+                        <a class="btn btn-link" href="{{ route('login.github') }}">
+                            Login with GitHub
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
