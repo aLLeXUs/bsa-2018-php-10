@@ -8,7 +8,7 @@
     ])
         <i class="fas fa-dollar-sign"></i> Currencies
     @endcomponent
-    @can('create')
+    @can('currency.create')
         @component('components.headerLink', [
             'link' => route('currencies.add')
         ])
